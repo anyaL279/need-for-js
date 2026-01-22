@@ -13,7 +13,15 @@ const score = document.querySelector('.score'),
       modalContentText = document.querySelector('.modal-content__text'),
       modalClose = document.getElementById('close-modal');
 
-const music = new Audio('audio/bensound-happyrock.mp3');
+const music = new Audio('audio/bensound-happyrock.mp3'); 
+
+const audioElement = new Audio("womp_womp.mp3");
+audioElement.id = "wompSound";
+audioElement.addEventListener("loadeddata", () => {
+audioElement.play();  
+  let duration = audioElement.duration;
+  // The duration variable now holds the duration (in seconds) of the audio clip
+});
 
 car.classList.add('car');
 
