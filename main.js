@@ -15,13 +15,8 @@ const score = document.querySelector('.score'),
 
 const music = new Audio('audio/bensound-happyrock.mp3'); 
 
-const audioElement = new Audio("womp_womp.mp3");
+const audioElement = new Audio("audio/womp_womp.mp3");
 audioElement.id = "wompSound";
-audioElement.addEventListener("loadeddata", () => {
-audioElement.play();  
-  let duration = audioElement.duration;
-  // The duration variable now holds the duration (in seconds) of the audio clip
-});
 
 car.classList.add('car');
 
@@ -188,6 +183,7 @@ function moveEnemy() {
         carRect.bottom >= enemyRect.top) {
           setting.start = false;
           start.classList.remove('hide');
+          audioElement.play();
     }
     enemy.y += setting.speed / 2;
     enemy.style.top = enemy.y + 'px';
